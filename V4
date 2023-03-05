@@ -1,1 +1,3 @@
-test
+script_key = getgenv().ScriptSettings.Preload.ScriptKey;
+--
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/510c3ba0e881efe252b07665f962ead5.lua"))()
