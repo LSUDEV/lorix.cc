@@ -27,9 +27,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "Atlanta",
-        assets = "Atlanta/Images",
-        configs = "Atlanta/Configs"
+        main = "Lorix",
+        assets = "Lorix/Images",
+        configs = "Lorix/Configs"
     },
     shared = {
         initialized = false,
