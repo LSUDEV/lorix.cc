@@ -1,7 +1,5 @@
 --[[
     @gs.cc
-    @lorix.cc
-    using this without permission from matas or linux = pasterino thx
 ]]
 -- // Variables
 local ws, uis, rs, hs, cas, plrs, stats = game:GetService("Workspace"), game:GetService("UserInputService"), game:GetService("RunService"), game:GetService("HttpService"), game:GetService("ContextActionService"), game:GetService("Players"), game:GetService("Stats")
@@ -108,14 +106,14 @@ do
         end
     end
     --
-    function utility:Create(instanceType, instanceOffset, instanceProperties, instanceParent)
+	function utility:Create(instanceType, instanceOffset, instanceProperties, instanceParent)
         local instanceType = instanceType or "Frame"
         local instanceOffset = instanceOffset or {Vector2.new(0,0)}
         local instanceProperties = instanceProperties or {}
         local instanceHidden = false
         local instance = nil
         --
-        if instanceType == "Frame" or instanceType == "frame" then
+		if instanceType == "Frame" or instanceType == "frame" then
             local frame = Drawing.new("Square")
             frame.Visible = true
             frame.Filled = true
@@ -218,7 +216,7 @@ do
             --
             return instance
         end
-    end
+	end
     --
     function utility:Instance(InstanceType, InstanceProperties)
         local Object = Instance.new(InstanceType)
@@ -316,7 +314,7 @@ do
         }
         --
         local mouseLocation = utility:MouseLocation()
-        return (mouseLocation.x >= values[1] and mouseLocation.x <= (values[1] + (values[3] - values[1]))) and (mouseLocation.y >= values[2] and mouseLocation.y <= (values[2] + (values[4] - values[2])))
+	    return (mouseLocation.x >= values[1] and mouseLocation.x <= (values[1] + (values[3] - values[1]))) and (mouseLocation.y >= values[2] and mouseLocation.y <= (values[2] + (values[4] - values[2])))
     end
     --
     function utility:GetTextBounds(text, textSize, font)
@@ -425,14 +423,14 @@ end
 -- // Library Functions
 do
     library.__index = library
-    pages.__index = pages
-    sections.__index = sections
+	pages.__index = pages
+	sections.__index = sections
     --
     function library:Notification(info)
     end
     --
     function library:Loader(info)
-        local info = info or {}
+		local info = info or {}
         local name = info.name or info.Name or info.title or info.Title or "UI Title"
         local size = info.size or info.Size or Vector2.new(375,359)
         local accent = info.accent or info.Accent or info.color or info.Color or theme.accent
@@ -745,7 +743,7 @@ do
             --
             spawn(function()
                 for i, v in pairs(library.drawings) do
-                    v[1].Transparency = window.isVisible and v[3] or 0
+                    utility:Lerp(v[1], {Transparency = window.isVisible and v[3] or 0}, 0.25)
                 end
             end)
             --
@@ -891,11 +889,11 @@ do
             window:Move(Vector2.new((utility:GetScreenSize().X/2) - (size.X/2), (utility:GetScreenSize().Y/2) - (size.Y/2)))
         end)
         --
-        return setmetatable(window, library)
-    end
+		return setmetatable(window, library)
+	end
     --
     function library:New(info)
-        local info = info or {}
+		local info = info or {}
         local name = info.name or info.Name or info.title or info.Title or "UI Title"
         local size = info.size or info.Size or Vector2.new(504,604)
         local accent = info.accent or info.Accent or info.color or info.Color or theme.accent
@@ -2484,8 +2482,8 @@ do
             window:Move(Vector2.new((utility:GetScreenSize().X/2) - (size.X/2), (utility:GetScreenSize().Y/2) - (size.Y/2)))
         end)
         --
-        return setmetatable(window, library)
-    end
+		return setmetatable(window, library)
+	end
     --
     function library:Page(info)
         local info = info or {}
