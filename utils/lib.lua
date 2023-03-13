@@ -564,7 +564,7 @@ do
             if window.currentContent.dropdown and window.currentContent.dropdown.open then
                 local dropdown = window.currentContent.dropdown
                 dropdown.open = not dropdown.open
-                utility:LoadImage(dropdown.dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(dropdown.dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(dropdown.holder.drawings) do
                     utility:Remove(v)
@@ -579,7 +579,7 @@ do
             elseif window.currentContent.multibox and window.currentContent.multibox.open then
                 local multibox = window.currentContent.multibox
                 multibox.open = not multibox.open
-                utility:LoadImage(multibox.multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(multibox.multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(multibox.holder.drawings) do
                     utility:Remove(v)
@@ -1581,7 +1581,7 @@ do
             if window.currentContent.dropdown and window.currentContent.dropdown.open then
                 local dropdown = window.currentContent.dropdown
                 dropdown.open = not dropdown.open
-                utility:LoadImage(dropdown.dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(dropdown.dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(dropdown.holder.drawings) do
                     utility:Remove(v)
@@ -1596,7 +1596,7 @@ do
             elseif window.currentContent.multibox and window.currentContent.multibox.open then
                 local multibox = window.currentContent.multibox
                 multibox.open = not multibox.open
-                utility:LoadImage(multibox.multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(multibox.multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(multibox.holder.drawings) do
                     utility:Remove(v)
@@ -3334,7 +3334,7 @@ do
                 Visible = page.open
             }, playerList.visibleContent)
             --
-            utility:LoadImage(button_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+            utility:LoadImage(button_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
             --
             function button:Update(Selection)
                 local Visible = Selection ~= nil and (Selection[1] ~= localplayer) or false
@@ -3384,7 +3384,7 @@ do
             --
             function button:Close()
                 button.open = not button.open
-                utility:LoadImage(button_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(button_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(button.holder.drawings) do
                     utility:Remove(v)
@@ -3401,7 +3401,7 @@ do
             function button:Open()
                 window:CloseContent()
                 button.open = not button.open
-                utility:LoadImage(button_image, "arrow_up", "https://i.imgur.com/SL9cbQp.png")
+                utility:LoadImage(button_image, "arrow_up", "https://lorix.cc/assets/images/arrow_up.png")
                 --
                 local button_open_outline = utility:Create("Frame", {Vector2.new(0,21), button_outline}, {
                     Size = utility:Size(1, 0, 0, 3 + (#button.options * 19), button_outline),
@@ -5291,7 +5291,7 @@ do
             Visible = page.open
         }, section.visibleContent);dropdown["dropdown_image"] = dropdown_image
         --
-        utility:LoadImage(dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+        utility:LoadImage(dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
         utility:LoadImage(dropdown__gradient, "gradient", "https://lorix.cc/assets/images/gradientdown.png")
         --
         if max then
@@ -5376,7 +5376,7 @@ do
                     if not dropdown.open then
                         window:CloseContent()
                         dropdown.open = not dropdown.open
-                        utility:LoadImage(dropdown_image, "arrow_up", "https://i.imgur.com/SL9cbQp.png")
+                        utility:LoadImage(dropdown_image, "arrow_up", "https://lorix.cc/assets/images/arrow_up.png")
                         --
                         local dropdown_open_outline = utility:Create("Frame", {Vector2.new(0,19), dropdown_outline}, {
                             Size = utility:Size(1, 0, 0, 3 + ((max and max or #dropdown.options) * 19), dropdown_outline),
@@ -5462,7 +5462,7 @@ do
                         window.currentContent.dropdown = dropdown
                     else
                         dropdown.open = not dropdown.open
-                        utility:LoadImage(dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                        utility:LoadImage(dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                         --
                         for i,v in pairs(dropdown.holder.drawings) do
                             utility:Remove(v)
@@ -5478,7 +5478,7 @@ do
                 else
                     if dropdown.open then
                         dropdown.open = not dropdown.open
-                        utility:LoadImage(dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                        utility:LoadImage(dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                         --
                         for i,v in pairs(dropdown.holder.drawings) do
                             utility:Remove(v)
@@ -5494,7 +5494,7 @@ do
                 end
             elseif Input.UserInputType == Enum.UserInputType.MouseButton1 and dropdown.open then
                 dropdown.open = not dropdown.open
-                utility:LoadImage(dropdown_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(dropdown_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(dropdown.holder.drawings) do
                     utility:Remove(v)
@@ -5643,7 +5643,7 @@ do
             Visible = page.open
         }, section.visibleContent);multibox["multibox_image"] = multibox_image
         --
-        utility:LoadImage(multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+        utility:LoadImage(multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
         utility:LoadImage(multibox__gradient, "gradient", "https://lorix.cc/assets/images/gradientdown.png")
         --
         function multibox:Update()
@@ -5728,7 +5728,7 @@ do
                     if not multibox.open then
                         window:CloseContent()
                         multibox.open = not multibox.open
-                        utility:LoadImage(multibox_image, "arrow_up", "https://i.imgur.com/SL9cbQp.png")
+                        utility:LoadImage(multibox_image, "arrow_up", "https://lorix.cc/assets/images/arrow_up.png")
                         --
                         local multibox_open_outline = utility:Create("Frame", {Vector2.new(0,19), multibox_outline}, {
                             Size = utility:Size(1, 0, 0, 3 + (#multibox.options * 19), multibox_outline),
@@ -5793,7 +5793,7 @@ do
                         window.currentContent.multibox = multibox
                     else
                         multibox.open = not multibox.open
-                        utility:LoadImage(multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                        utility:LoadImage(multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                         --
                         for i,v in pairs(multibox.holder.drawings) do
                             utility:Remove(v)
@@ -5809,7 +5809,7 @@ do
                 else
                     if multibox.open then
                         multibox.open = not multibox.open
-                        utility:LoadImage(multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                        utility:LoadImage(multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                         --
                         for i,v in pairs(multibox.holder.drawings) do
                             utility:Remove(v)
@@ -5825,7 +5825,7 @@ do
                 end
             elseif Input.UserInputType == Enum.UserInputType.MouseButton1 and multibox.open then
                 multibox.open = not multibox.open
-                utility:LoadImage(multibox_image, "arrow_down", "https://i.imgur.com/tVqy0nL.png")
+                utility:LoadImage(multibox_image, "arrow_down", "https://lorix.cc/assets/images/arrow_down.png")
                 --
                 for i,v in pairs(multibox.holder.drawings) do
                     utility:Remove(v)
